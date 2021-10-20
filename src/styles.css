@@ -1,1 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --verdePrimario: #90C456;
+    --verdeOscuro: #229954;
+    --blanco: #FFFF;
+    --grisClaro: #FDFEFE;
+    --gris: #E5E7E9;
+    --amarilloClaro: #FEF9E7;
+    --amarilloEstrella: #F3E42A;
+    --naranjaPrimario: #F39C12;
+    --naranjaOscuro: #D68910;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    /*font-family: 'Varela Round', sans-serif;*/
+    font-family: 'Signika Negative', sans-serif;
+    margin-bottom: 2rem;
+}
+
+a,
+p {
+    font-size: 1.1rem;
+}
+
+p .btn-responsive {
+    display: block;
+}
+
+@media (min-width: 992px) {
+    .btn-responsive {
+        display: none;
+    }
+}
+
+.a-responsive {
+    display: inline;
+}
+
+@media (max-width: 992px) {
+    .a-responsive {
+        display: none;
+    }
+}
+
+.precio {
+    color: var(--verdeOscuro);
+    font-weight: 600;
+}
+
+.btn-naranja {
+    background-color: var(--naranjaPrimario);
+    color: var(--blanco);
+}
+
+.btn-naranja:hover {
+    background-color: var(--naranjaOscuro);
+    color: var(--blanco);
+}

@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 // **Componentes**
 // --VistaPrincipal--
 import { InicioComponent } from './components/vistaPrincipal/inicio/inicio.component';
+//import {} from './components/vistaPrincipal/'
 
 const routes: Routes = [
   { path: 'inicio', component: InicioComponent }, 

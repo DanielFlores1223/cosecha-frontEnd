@@ -1,0 +1,45 @@
+.imagen-carrusel {
+    width: 100%;
+    height: 20rem;
+}
+
+@media (max-width: 576px) {
+    .imagen-carrusel {
+        height: 11rem;
+    }
+}
+
+.catalogo {
+    background-color: var(--amarilloClaro);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.estrellas {
+    color: var(--amarilloEstrella);
+    margin-right: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+.navegacion-card a {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0rem;
+}
+
+.card-w {
+    width: 17rem;
+}
+
+@media (max-width: 768px) {
+    .card-margin {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-w {
+        width: 90%;
+    }
+}
