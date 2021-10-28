@@ -1,0 +1,98 @@
+.inicio-sesion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid var(--grisClaro);
+    border-radius: 1rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 0;
+}
+
+.login-encabezado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--grisClaro);
+    padding: 2rem 0;
+}
+
+.login-encabezado svg {
+    color: var(--verdeOpacoOscuro);
+}
+
+.login-encabezado h4 {
+    margin-bottom: 1rem;
+    color: var(--verdeOscuro);
+}
+
+.input-style {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.input-style svg {
+    margin-right: 0.5rem;
+    color: var(--verdePrimario);
+}
+
+.btn-form {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+.div-registro {
+    border-radius: 1rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-image: url('../../../../assets/img/orange.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 0;
+}
+
+.div-registro-contenido {
+    border-radius: 1rem;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-registro-contenido p {
+    background-color: var(--naranjaOscuro);
+    width: 100%;
+    color: var(--blanco);
+    font-size: 2rem;
+    font-family: var(--fuenteTitulos);
+    font-weight: 600;
+    text-align: center;
+    padding: 0.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.div-registro-contenido a {
+    display: flex;
+    align-items: center;
+    padding: 0rem 1.5rem;
+    font-size: 1.3rem;
+    font-family: var(--fuenteTitulos);
+    color: var(--blanco);
+    font-weight: 600;
+    background-color: var(--naranjaOscuro);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.div-registro-contenido a span {
+    margin-left: 0.4rem;
+}

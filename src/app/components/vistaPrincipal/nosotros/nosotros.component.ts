@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+//Servicios
+import { ProveedorService } from '../../../services/proveedor.service';
 
 @Component({
   selector: 'app-nosotros',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NosotrosComponent implements OnInit {
 
-  constructor() { }
+  constructor( private proveedorService : ProveedorService) { }
+
+  prueba = false;
 
   ngOnInit(): void {
+    this.getDataSearch();
   }
+
+  getDataSearch() {
+    this.proveedorService.obtencionDataSearch.subscribe( async data => {
+       
+        if (data.busqueda != '') {
+          this.prueba = true;
+        }else{
+          this.prueba = false;
+        }
+     });
+   }
 
 }

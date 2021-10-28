@@ -1,0 +1,72 @@
+.navegacion-card a {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0rem;
+}
+
+.navegacion-card a {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0rem;
+}
+
+.card-w {
+    width: 17rem;
+}
+
+@media (max-width: 768px) {
+    .card-margin {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-w {
+        width: 90%;
+    }
+}
+
+hr {
+    width: 4rem;
+    margin: 0;
+    padding: 0.3rem;
+    margin-left: 0.5rem;
+    color: var(--verdeOscuro);
+    background-color: var(--verdeOscuro);
+}
+
+.titulo-seccion {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.2rem;
+    margin-top: 2rem;
+    border-bottom: 1px solid var(--grisClaro);
+    margin-top: 0.2rem;
+}
+
+.my-pagination /deep/ .ngx-pagination .current {
+    background-color: var(--verdeOpacoOscuro);
+}
+
+.sub-p {
+    color: var(--verdeOscuro);
+    font-weight: 600;
+}
+
+.h2-empresa {
+    margin-bottom: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--verdeOpaco);
+}
+
+.parrafo-usuario {
+    font-size: 1.5rem;
+    margin-top: 0;
+    color: var(--verdeOpacoOscuro);
+}
+
+.estrellas {
+    color: var(--amarilloEstrella);
+    margin-right: 0.2rem;
+    margin-bottom: 1rem;
+}

@@ -18,7 +18,7 @@
 
 .activo,
 .barra a:hover {
-    border-bottom: 4px solid var(--verdeOscuro);
+    border-bottom: 4px solid var(--grisClaro);
     border-radius: 4px;
     color: var(--blanco);
 }
@@ -27,7 +27,7 @@
     .activo,
     .barra a:hover {
         border-bottom: 0;
-        border-left: 4px solid var(--verdeOscuro);
+        border-left: 4px solid var(--grisClaro);
         border-radius: 4px;
         color: var(--blanco);
         padding-left: 1rem;
@@ -39,12 +39,12 @@
 }
 
 .logo {
-    width: 15rem;
+    width: 13rem;
 }
 
 @media (min-width: 992px) {
     .logo {
-        margin: 1rem;
+        margin-bottom: 0.5rem;
     }
 }
 

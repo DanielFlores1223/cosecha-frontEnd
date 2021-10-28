@@ -13,8 +13,24 @@ export class ProveedorService {
 
   constructor( private http: HttpClient ) { }
 
+  getProveedores() {
+    return this.http.get(this.url);
+  }
+
+  getSingleProveedor(id:any) {
+    return this.http.get(`${this.url}/${id}`);
+  }
+
   searchProveedorProductos(busqueda: String) {
     return this.http.post<any>(`${this.url}/searchProvProd`, {busqueda});
+  }
+
+  searchOnlyProductos(busqueda: String) {
+    return this.http.post<any>(`${this.url}/searchOnlyProductos`, {busqueda});
+  }
+
+  searchProductoId(id: String) {
+    return this.http.post<any>(`${this.url}/searchProductoId`, {id});
   }
 
 }

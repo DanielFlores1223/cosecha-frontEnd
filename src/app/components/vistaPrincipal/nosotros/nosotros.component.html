@@ -1,1 +1,57 @@
-<p>nosotros works!</p>
+<main *ngIf="!prueba; else buscadorActivo">
+    <div class="container p-0">
+        <div class="queEsCosecha">
+            <div class="queEsCosecha--titulo">
+                <h1>¿Qué es cosecha?</h1>
+            </div>
+            <div class="queEsCosecha--informacion">
+                <p>
+                    Es una plataforma online que conecta a los productores locales con los restaurantes, banqueteras y negocios del giro gastronómico. Asimismo, ayuda a distribuir eficientemente a los proveedores agroalimentarios hasta el cliente final, reduciendo la cadena
+                    de suministro.
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="row">
+                    <div class="col-6 imgMision">
+                        <div class="imgMision--titulo">
+                            <h2>Misión</h2>
+                        </div>
+                    </div>
+                    <div class="col-6 misionInfo">
+                        <div>
+                            <p>
+                                Conectar a los productores locales con cualquier empresa del ramo gastronómico de la Zona Metropolitana de Guadalajara, para facilitar los procesos de compra y apoyar la economia local.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="row">
+                    <div class="col-6 visionInfo">
+                        <div>
+                            <p>
+                                Posicionarnos como el catálogo con mayor cartera de proveedores de insumos y materia prima para restaurantes, abarcando al menos el 50% de los establecimientos del sector primario en Jalisco y el 5% de restaurantes de la Zona Metropolitana de Guadalajara.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-6 imgVision">
+                        <div class="imgMision--titulo">
+                            <h2>Visión</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<ng-template #buscadorActivo>
+    <app-respuesta-buscador></app-respuesta-buscador>
+</ng-template>

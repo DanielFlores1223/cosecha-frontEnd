@@ -14,18 +14,15 @@ export class MenuComponent implements OnInit {
 
   busqueda:String = '';
 
-  dataRequest: any;
-
   ngOnInit(): void {
   }
 
-  async getSearch() {
-    await this.proveedorService.searchProveedorProductos(this.busqueda).subscribe( async (res) =>{
-        this.dataRequest = await res;
-
-        await this.proveedorService.obtencionDataSearch.emit({
-          productos: res.productos,
-          proveedores: res.proveedores,
+  getSearch() {
+   this.proveedorService.searchProveedorProductos(this.busqueda).subscribe( async (res) =>{
+        
+        this.proveedorService.obtencionDataSearch.emit({
+          productos: await res.productos,
+          proveedores: await res.proveedores,
           busqueda: this.busqueda
         });
     }, 
@@ -33,5 +30,9 @@ export class MenuComponent implements OnInit {
       console.log(err);
     });
   
+  }
+
+  cambiarPagina() {
+    this.busqueda = '';
   }
 }

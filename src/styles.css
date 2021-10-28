@@ -1,27 +1,32 @@
 :root {
-    --verdePrimario: #90C456;
-    --verdeOscuro: #229954;
+    --verdePrimario: #598C0B;
+    --verdeOscuro: #365914;
+    --verdeOpacoOscuro: #738C5A;
+    --verdeOpaco: #88A66A;
     --blanco: #FFFF;
-    --grisClaro: #FDFEFE;
-    --gris: #E5E7E9;
-    --amarilloClaro: #FEF9E7;
+    --grisClaro: #F2F2F2;
     --amarilloEstrella: #F3E42A;
     --naranjaPrimario: #F39C12;
     --naranjaOscuro: #D68910;
+    --fuenteTitulos: 'Signika Negative', sans-serif;
 }
 
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
     /*font-family: 'Varela Round', sans-serif;*/
-    font-family: 'Signika Negative', sans-serif;
+    font-family: var(--fuenteTitulos);
     margin-bottom: 2rem;
+    font-weight: 600;
+    color: var(--verdeOscuro);
 }
 
 a,
 p {
     font-size: 1.1rem;
+    line-height: 1.5;
 }
 
 p .btn-responsive {
@@ -57,4 +62,36 @@ p .btn-responsive {
 .btn-naranja:hover {
     background-color: var(--naranjaOscuro);
     color: var(--blanco);
+}
+
+.btn-verde {
+    background-color: var(--verdeOpaco);
+    color: var(--blanco);
+}
+
+.btn-verde:hover {
+    background-color: var(--verdeOpacoOscuro);
+    color: var(--blanco);
+}
+
+@media (max-width: 768px) {
+    .menu-responsive-lg {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .menu-responsive-md {
+        display: none;
+    }
+}
+
+.pocisionar-paginacion {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.imagen-card {
+    cursor: pointer;
 }

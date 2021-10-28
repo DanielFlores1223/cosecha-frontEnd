@@ -1,0 +1,33 @@
+<div class="container">
+    <!-- <input type="file" name="" id="" class="d-none" (change)="onPhotoSelected($event)" #photoInput>
+    <img [src]="photoSelected || 'assets/img/no_photo.png'" alt="" class="img-fluid" (click)="photoInput.click()"> -->
+    <div>
+        <label for="">Nombre</label>
+        <input class="form-control" type="text" name="nombreUsuario" [(ngModel)]="clienteInfo.nombreUsuario">
+    </div>
+    <div>
+        <label for="">Restaurante</label>
+        <input class="form-control" type="text" name="nombreRestaurante" [(ngModel)]="clienteInfo.nombreRestaurante">
+    </div>
+    <div>
+        <label for="">Telefono</label>
+        <input class="form-control" type="text" name="telefono" [(ngModel)]="clienteInfo.telefono">
+    </div>
+    <div>
+        <label for="">Correo eléctronico</label>
+        <input class="form-control" type="text" name="email" [(ngModel)]="clienteInfo.email">
+    </div>
+    <div>
+        <label for="">Contraseña</label>
+        <input class="form-control" type="password" name="password" [(ngModel)]="clienteInfo.password">
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" [(ngModel)]="clienteInfo.publicidad">
+        <label class="form-check-label" for="flexCheckIndeterminate">
+       Recibir públicidad
+     </label>
+    </div>
+    <div>
+        <button class="btn btn-primary" (click)="createCliente()">Registrarse</button>
+    </div>
+</div>

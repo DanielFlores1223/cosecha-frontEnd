@@ -1,0 +1,63 @@
+<!-- <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+    <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+        <img src="./assets/img/logo.jpeg" alt="logo-menu" class="w-100">
+    </a>
+    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+        <li class="nav-item">
+            <a routerLink="/dashboard-proveedor" class="nav-link align-middle px-0">
+                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Inicio</span>
+            </a>
+        </li>
+        <li>
+            <a class="av-link px-0 align-middle" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Mi catálogo
+            </a>
+            <div class="collapse mt-2" id="collapseExample">
+                <div class="card card-body">
+                    <a routerLink="/catalogo-read" class="nav-link px-0"> <span class="d-none d-sm-inline">Ver productos</span></a>
+                    <a routerLink="/catalogo-create" class="nav-link px-0"> <span class="d-none d-sm-inline">Registrar producto</span></a>
+                </div>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/dashboard-proveedor" class="nav-link align-middle px-0">
+                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Pedidos</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link align-middle px-0" (click)="cerrarSesion()">
+                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Cerrar sesión</span>
+            </a>
+        </li>
+    </ul>
+
+</div> -->
+
+<header>
+    <!-- offcanvas -->
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+        Button with data-bs-target
+      </button>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+            </div>
+            <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+              Dropdown button
+            </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>

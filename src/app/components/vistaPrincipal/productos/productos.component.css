@@ -1,0 +1,62 @@
+.categorias-titulo {
+    background-image: url('../../../../assets/img/vision.jpg');
+    height: 15rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.categorias-titulo div {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.categorias-titulo div h3 {
+    color: var(--blanco);
+    margin-bottom: 0;
+    padding: 1rem 0;
+}
+
+.navegacion-card a {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0rem;
+}
+
+.categorias-buscador {
+    overflow-y: hidden;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+}
+
+.my-pagination /deep/ .ngx-pagination .current {
+    background-color: var(--verdeOpacoOscuro);
+}
+
+.navegacion-card a {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0rem;
+}
+
+.card-w {
+    width: 17rem;
+}
+
+@media (max-width: 768px) {
+    .card-margin {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-w {
+        width: 90%;
+    }
+}

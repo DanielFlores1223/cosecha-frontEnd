@@ -1,8 +1,32 @@
-<app-menu></app-menu>
+<div *ngIf="loginStatus; else noLogin">
+    <div [ngSwitch]="typeUser">
+        <div *ngSwitchCase="'cliente'">
+            <p>Inicio 1</p>
+        </div>
+        <div *ngSwitchCase="'proveedor'">
+            <app-menu-proveedor></app-menu-proveedor>
+            <div class="container">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+        <div *ngSwitchCase="'administrador'" class="container-fluid">
+            <div class="row flex-nowrap">
+                <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+                    <app-menu-administrador></app-menu-administrador>
+                </div>
+                <div class="col py-3">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
 
-<div class="container-fluid my-4">
-    <router-outlet></router-outlet>
+        </div>
+    </div>
 </div>
 
-
-<app-pie-pagina></app-pie-pagina>
+<ng-template #noLogin>
+    <app-menu></app-menu>
+    <div class="container-fluid my-4">
+        <router-outlet></router-outlet>
+    </div>
+    <app-pie-pagina></app-pie-pagina>
+</ng-template>

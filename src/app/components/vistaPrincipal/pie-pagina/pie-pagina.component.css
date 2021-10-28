@@ -5,3 +5,56 @@
 .footer-copyright {
     background-color: var(--verdeOscuro);
 }
+
+a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+a span {
+    margin-left: 0.5rem;
+}
+
+h5 {
+    color: var(--blanco);
+    border-bottom: 5px solid var(--blanco);
+    text-align: center;
+    padding-bottom: 0.3rem;
+}
+
+.cosecha {
+    display: inline;
+}
+
+.caja-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caja-titulo h3 {
+    font-size: 4rem;
+    color: var(--verdeOscuro);
+}
+
+.titulo-modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem
+}
+
+.titulo-modal img {
+    height: 8rem;
+}
+
+.color-header {
+    background-color: var(--verdeOpaco);
+}
+
+.color-header button {
+    color: var(--blanco);
+    background-color: var(--blanco);
+}

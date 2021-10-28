@@ -1,6 +1,6 @@
 .imagen-carrusel {
     width: 100%;
-    height: 20rem;
+    height: 22rem;
 }
 
 @media (max-width: 576px) {
@@ -9,37 +9,112 @@
     }
 }
 
+hr {
+    width: 4rem;
+    margin: 0;
+    padding: 0.3rem;
+    margin-left: 0.5rem;
+    color: var(--verdeOscuro);
+    background-color: var(--verdeOscuro);
+}
+
+.titulo-seccion {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.2rem;
+    margin-top: 2rem;
+    border-bottom: 1px solid var(--grisClaro);
+    margin-top: 0.2rem;
+}
+
 .catalogo {
-    background-color: var(--amarilloClaro);
+    background-color: var(--grisClaro);
     padding: 2rem;
     border-radius: 10px;
 }
 
-.estrellas {
-    color: var(--amarilloEstrella);
-    margin-right: 0.2rem;
+.intro-style {
+    background-image: url('../../../../assets//img/quees.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 25rem;
+    padding: 0;
+    border-radius: 1rem;
     margin-bottom: 1rem;
 }
 
-.navegacion-card a {
-    display: block;
-    width: 100%;
-    margin: 0.5rem 0rem;
-}
-
-.card-w {
-    width: 17rem;
-}
-
-@media (max-width: 768px) {
-    .card-margin {
-        display: flex;
-        justify-content: center;
+@media (max-width: 480px) {
+    .intro-style {
+        height: 35rem;
+        text-align: justify;
     }
 }
 
-@media (max-width: 576px) {
-    .card-w {
-        width: 90%;
+.intro-style-contenido {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--blanco);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.intro-style-contenido p {
+    margin: 0 15rem;
+    background-color: var(--verdeOpacoOscuro);
+    padding: 1rem;
+    text-align: center;
+}
+
+.intro-style-contenido p a {
+    display: block;
+    text-decoration: none;
+    color: var(--blanco);
+    cursor: pointer;
+    background-color: var(--naranjaPrimario);
+    margin: 0 12rem;
+    margin-top: 1rem;
+    padding: 0.8rem 0;
+    border-radius: 0.5rem;
+}
+
+.intro-style-contenido p a:hover {
+    background-color: var(--naranjaOscuro);
+}
+
+.intro-style-contenido h2 {
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem 12.3rem;
+    text-align: center;
+    color: var(--blanco);
+}
+
+@media (max-width: 768px) {
+    .intro-style-contenido p {
+        margin: 0 2rem;
+        max-width: 100%;
+    }
+    .intro-style-contenido p a {
+        margin: 0 5rem;
+        margin-top: 1rem;
+    }
+    .intro-style-contenido h2 {
+        padding: 1rem 6.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-style-contenido h2 {
+        padding: 1rem 3rem;
+    }
+    .intro-style-contenido p a {
+        margin: 0;
+        margin-top: 1rem;
     }
 }
