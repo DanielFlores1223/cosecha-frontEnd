@@ -1,1 +1,315 @@
-<p>registro works!</p>
+<main class="container" *ngIf="tipoForm === ''">
+    <hr>
+    <h2 class="titulo-seccion">Elige una opción</h2>
+    <div class="row my-4">
+        <div class="col-sm-12 col-md-6 registro-cliente mb-3">
+            <div class="registro-cliente-contenido">
+                <div>
+                    <h2>¿Quieres comprar productos?</h2>
+                </div>
+                <button class="btn btn-verde btn-verde-registro" (click)="desplegarForm('cliente')">
+                    Presiona aquí para registrarte
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-hand-index" viewBox="0 0 16 16">
+                         <path d="M6.75 1a.75.75 0 0 1 .75.75V8a.5.5 0 0 0 1 0V5.467l.086-.004c.317-.012.637-.008.816.027.134.027.294.096.448.182.077.042.15.147.15.314V8a.5.5 0 1 0 1 0V6.435a4.9 4.9 0 0 1 .106-.01c.316-.024.584-.01.708.04.118.046.3.207.486.43.081.096.15.19.2.259V8.5a.5.5 0 0 0 1 0v-1h.342a1 1 0 0 1 .995 1.1l-.271 2.715a2.5 2.5 0 0 1-.317.991l-1.395 2.442a.5.5 0 0 1-.434.252H6.035a.5.5 0 0 1-.416-.223l-1.433-2.15a1.5 1.5 0 0 1-.243-.666l-.345-3.105a.5.5 0 0 1 .399-.546L5 8.11V9a.5.5 0 0 0 1 0V1.75A.75.75 0 0 1 6.75 1zM8.5 4.466V1.75a1.75 1.75 0 1 0-3.5 0v5.34l-1.2.24a1.5 1.5 0 0 0-1.196 1.636l.345 3.106a2.5 2.5 0 0 0 .405 1.11l1.433 2.15A1.5 1.5 0 0 0 6.035 16h6.385a1.5 1.5 0 0 0 1.302-.756l1.395-2.441a3.5 3.5 0 0 0 .444-1.389l.271-2.715a2 2 0 0 0-1.99-2.199h-.581a5.114 5.114 0 0 0-.195-.248c-.191-.229-.51-.568-.88-.716-.364-.146-.846-.132-1.158-.108l-.132.012a1.26 1.26 0 0 0-.56-.642 2.632 2.632 0 0 0-.738-.288c-.31-.062-.739-.058-1.05-.046l-.048.002zm2.094 2.025z"/>
+                       </svg>
+                </button>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 registro-proveedor mb-3">
+            <div class="registro-cliente-contenido">
+                <div>
+                    <h2>¿Quieres anunciar tus productos?</h2>
+                </div>
+                <button class="btn btn-verde btn-verde-registro" (click)="desplegarForm('proveedor')">
+                    Presiona aquí para registrarte
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-hand-index" viewBox="0 0 16 16">
+                         <path d="M6.75 1a.75.75 0 0 1 .75.75V8a.5.5 0 0 0 1 0V5.467l.086-.004c.317-.012.637-.008.816.027.134.027.294.096.448.182.077.042.15.147.15.314V8a.5.5 0 1 0 1 0V6.435a4.9 4.9 0 0 1 .106-.01c.316-.024.584-.01.708.04.118.046.3.207.486.43.081.096.15.19.2.259V8.5a.5.5 0 0 0 1 0v-1h.342a1 1 0 0 1 .995 1.1l-.271 2.715a2.5 2.5 0 0 1-.317.991l-1.395 2.442a.5.5 0 0 1-.434.252H6.035a.5.5 0 0 1-.416-.223l-1.433-2.15a1.5 1.5 0 0 1-.243-.666l-.345-3.105a.5.5 0 0 1 .399-.546L5 8.11V9a.5.5 0 0 0 1 0V1.75A.75.75 0 0 1 6.75 1zM8.5 4.466V1.75a1.75 1.75 0 1 0-3.5 0v5.34l-1.2.24a1.5 1.5 0 0 0-1.196 1.636l.345 3.106a2.5 2.5 0 0 0 .405 1.11l1.433 2.15A1.5 1.5 0 0 0 6.035 16h6.385a1.5 1.5 0 0 0 1.302-.756l1.395-2.441a3.5 3.5 0 0 0 .444-1.389l.271-2.715a2 2 0 0 0-1.99-2.199h-.581a5.114 5.114 0 0 0-.195-.248c-.191-.229-.51-.568-.88-.716-.364-.146-.846-.132-1.158-.108l-.132.012a1.26 1.26 0 0 0-.56-.642 2.632 2.632 0 0 0-.738-.288c-.31-.062-.739-.058-1.05-.046l-.048.002zm2.094 2.025z"/>
+                       </svg>
+               </button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<main class="container" *ngIf="tipoForm === 'cliente'">
+    <div class="posicionar-formulario">
+        <div class="formulario-registro">
+            <div class="formulario-registro--header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                    <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                  </svg>
+                <h4>Registro</h4>
+            </div>
+            <div class="grupos">
+                <div class="row">
+                    <div class="grupo-form col-sm-12 col-md-6">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" class="form-control input-style-text" [(ngModel)]="clienteInfo.nombreUsuario">
+                    </div>
+                    <div class="grupo-form col-sm-12 col-md-6">
+                        <label for="restaurante">Nombre Restaurante</label>
+                        <input type="text" name="restaurante" class="form-control input-style-text" [(ngModel)]="clienteInfo.nombreRestaurante">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="grupo-form col-sm-12 col-md-6">
+                        <label for="telefono">Telefono</label>
+                        <input type="tel" maxlength="10" name="telefono" class="form-control input-style-text" [(ngModel)]="clienteInfo.telefono">
+                    </div>
+                    <div class="grupo-form col-sm-12 col-md-6">
+                        <label for="email">Correo eléctronico</label>
+                        <input type="email" name="email" class="form-control input-style-text" [(ngModel)]="clienteInfo.email">
+                    </div>
+                </div>
+
+                <div class="grupo-form">
+                    <label for="password">Contraseña</label>
+                    <input type="password" name="password" class="form-control input-style-text" [(ngModel)]="clienteInfo.password">
+                </div>
+                <div class="form-check grupo-form">
+                    <input class="form-check-input color-check" type="checkbox" value="" id="flexCheckIndeterminate" [(ngModel)]="clienteInfo.publicidad">
+                    <label class="form-check-label" for="flexCheckIndeterminate">
+                   Recibir públicidad
+                 </label>
+                </div>
+                <p class="p-importante">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+              </svg><span>Importante: </span>Leer las Políticas de Clientes
+                </p>
+                <div class=" botonera-tarjeta">
+                    <button type="button" class="btn btn-verde botones-flex" data-bs-toggle="modal" data-bs-target="#modalTarjeta">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                        <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                      </svg>
+                    Registrarse
+                  </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<main class="container" *ngIf="tipoForm === 'proveedor'">
+    <div class="posicionar-formulario">
+        <div class="formulario-registro--proveedor">
+            <div class="formulario-registro--header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                    <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                  </svg>
+                <h4>Registro</h4>
+            </div>
+            <div class="grupos">
+                <div class="row">
+                    <!-- Inputs de formulario proveedor -->
+                    <div class="col-sm-12 col-md-6">
+                        <div class="row">
+                            <div class="grupo-form col-sm-12 col-md-6">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" name="nombre" class="form-control input-style-text" [(ngModel)]="proveedorInfo.nombreUsuario">
+                            </div>
+                            <div class="grupo-form col-sm-12 col-md-6">
+                                <label for="empresa">Nombre Empresa</label>
+                                <input type="text" name="empresa" class="form-control input-style-text" [(ngModel)]="proveedorInfo.nombreEmpresa">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="grupo-form col-sm-12 col-md-6">
+                                <label for="telefono">Telefono</label>
+                                <input type="tel" maxlength="10" name="telefono" class="form-control input-style-text" [(ngModel)]="proveedorInfo.telefono">
+                            </div>
+                            <div class="grupo-form col-sm-12 col-md-6">
+                                <label for="email">Correo eléctronico</label>
+                                <input type="email" name="email" class="form-control input-style-text" [(ngModel)]="proveedorInfo.email">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="grupo-form col-sm-12 col-md-6">
+                                <label for="rfc">RFC</label>
+                                <input type="text" name="rfc" class="form-control input-style-text" [(ngModel)]="proveedorInfo.rfc">
+                            </div>
+                            <div class="grupo-form col-sm-12 col-md-6">
+                                <label for="domicilio">Domicilio</label>
+                                <input type="text" name="domicilio" class="form-control input-style-text" [(ngModel)]="proveedorInfo.domicilio">
+                            </div>
+                        </div>
+
+                        <div class="grupo-form">
+                            <label for="password">Contraseña</label>
+                            <input type="password" name="password" class="form-control input-style-text" [(ngModel)]="proveedorInfo.password">
+                        </div>
+
+                    </div>
+                    <!-- Input de la imagen del proveedor -->
+                    <div class=" col-sm-12 col-md-6">
+                        <div class="grupo-form">
+                            <label for="img">Imagen de la empresa</label>
+                            <input type="file" name="img" id="" class="d-none" (change)="onPhotoSelected($event)" #photoInput>
+                            <img [src]="photoSelected || 'assets/img/no_photo.png'" alt="" class="img-fluid imagen-form" (click)="photoInput.click()">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-check grupo-form">
+                            <input class="form-check-input color-check" type="checkbox" value="" id="flexCheckIndeterminate" [(ngModel)]="proveedorInfo.publicidad">
+                            <label class="form-check-label" for="flexCheckIndeterminate">
+                           Recibir públicidad
+                         </label>
+                        </div>
+
+                        <p class="p-importante">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+                      </svg><span>Importante: </span>Leer las Políticas de Proveedores
+                        </p>
+                        <div class=" botonera-tarjeta">
+                            <button type="button" class="btn btn-verde botones-flex" data-bs-toggle="modal" data-bs-target="#modalTarjeta">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                                <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                              </svg>
+                            Registrarse
+                          </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<!-- Modal Pago con Trajeta-->
+<div class="modal fade" id="modalTarjeta" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header color-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <!-- Tarjeta -->
+                        <section class="tarjeta" id="tarjeta" (click)="mostrarFrente()">
+                            <div class="delantera">
+                                <div class="logo-marca" id="logo-marca">
+                                    <!-- <img src="./assets/img/logos/visa.png" alt=""> -->
+                                </div>
+                                <img src="./assets/img/chip-tarjeta.png" class="chip" alt="">
+                                <div class="datos">
+                                    <div class="grupo" id="numero">
+                                        <p class="label">Número Tarjeta</p>
+                                        <p class="numero">#### #### #### ####</p>
+                                    </div>
+                                    <div class="flexbox">
+                                        <div class="grupo" id="nombre">
+                                            <p class="label">Nombre Tarjeta</p>
+                                            <p class="nombre">-</p>
+                                        </div>
+
+                                        <div class="grupo" id="expiracion">
+                                            <p class="label">Expiracion</p>
+                                            <p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="trasera">
+                                <div class="barra-magnetica"></div>
+                                <div class="datos">
+                                    <div class="grupo" id="firma">
+                                        <p class="label">Firma</p>
+                                        <div class="firma">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="grupo" id="ccv">
+                                        <p class="label">CCV</p>
+                                        <p class="ccv"></p>
+                                    </div>
+                                </div>
+                                <p class="leyenda">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus exercitationem, voluptates illo.</p>
+                                <a href="#" class="link-banco">www.tubanco.com</a>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-sm-12 col-md-6 mt-3">
+                        <h5 class="m-0 mb-1">Ingresa los datos de tu tarjeta</h5>
+                        <!-- Formulario -->
+                        <form action="" id="formulario-tarjeta" class="formulario-tarjeta active">
+                            <div class="grupo">
+                                <label for="inputNumero">Número Tarjeta</label>
+                                <input type="text" id="inputNumero" maxlength="19" autocomplete="off" (keyup)="escribirTarjeta($event)">
+                            </div>
+                            <div class="grupo">
+                                <label for="inputNombre">Nombre</label>
+                                <input type="text" id="inputNombre" maxlength="19" autocomplete="off" (keyup)="escribirNombre($event)">
+                            </div>
+                            <div class="flexbox">
+                                <div class="grupo expira">
+                                    <label for="selectMes">Expiracion</label>
+                                    <div class="flexbox">
+                                        <div class="grupo-select">
+                                            <select name="mes" id="selectMes" (change)="escribirMes($event)">
+                                                <option disabled selected>Mes</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                            </select>
+                                            <i class="fas fa-angle-down"></i>
+                                        </div>
+                                        <div class="grupo-select">
+                                            <select name="year" id="selectYear" (change)="escribirYear($event)">
+                                                <option disabled selected>Año</option>
+                                                <option value="2021">2021</option>
+                                                <option value="2022">2022</option>
+                                                <option value="2023">2023</option>
+                                                <option value="2024">2024</option>
+                                                <option value="2025">2025</option>
+                                                <option value="2026">2026</option>
+                                                <option value="2027">2027</option>
+                                                <option value="2028">2028</option>
+                                                <option value="2029">2029</option>
+                                            </select>
+                                            <i class="fas fa-angle-down"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grupo ccv">
+                                    <label for="inputCCV">CCV</label>
+                                    <input type="text" id="inputCCV" maxlength="3" (keyup)="escribirCCV()">
+                                </div>
+                            </div>
+                            <div class="botonera-tarjeta">
+                                <button type="submit" class="btn btn-verde botones-flex" (click)="registrarUsuario()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-credit-card-fill" viewBox="0 0 16 16">
+                                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1H0V4zm0 3v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7H0zm3 2h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1z"/>
+                                      </svg>
+                                    Pagar $1500 MXN
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

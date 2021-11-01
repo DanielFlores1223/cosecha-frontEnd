@@ -49,12 +49,3 @@ h5 {
 .titulo-modal img {
     height: 8rem;
 }
-
-.color-header {
-    background-color: var(--verdeOpaco);
-}
-
-.color-header button {
-    color: var(--blanco);
-    background-color: var(--blanco);
-}

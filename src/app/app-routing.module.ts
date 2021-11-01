@@ -10,6 +10,7 @@ import { NosotrosComponent } from './components/vistaPrincipal/nosotros/nosotros
 import { ProductosComponent } from './components/vistaPrincipal/productos/productos.component';
 import { ProveedoresComponent } from './components/vistaPrincipal/proveedores/proveedores.component';
 import { ProveedorCatalogoComponent } from './components/vistaPrincipal/proveedor-catalogo/proveedor-catalogo.component';
+import { RegistroComponent } from './components/vistaPrincipal/registro/registro.component';
 
 // --Administrador--
 import { DashboardAdministradorComponent } from './components/administrador/dashboard-administrador/dashboard-administrador.component';
@@ -24,6 +25,7 @@ import { CatalogoCreateComponent } from './components/proveedor/mi-catalogo/cata
 import { CatalogoUpdateComponent } from './components/proveedor/mi-catalogo/catalogo-update/catalogo-update.component';
 
 const routes: Routes = [
+  // --Vista principal paths--
   { path: 'inicio', component: InicioComponent }, 
   { path: 'inicio-sesion', component: InicioSesionComponent },
   { path: 'respuesta-buscador', component: RespuestaBuscadorComponent },
@@ -31,11 +33,14 @@ const routes: Routes = [
   { path: 'productos', component: ProductosComponent},
   { path: 'proveedores', component: ProveedoresComponent},
   { path: 'proveedor-catalogo/:id', component: ProveedorCatalogoComponent },
+  { path: 'registro', component: RegistroComponent},
+
   // --administrador paths--
   { path:'dashboard-administrador', component: DashboardAdministradorComponent },
   { path: 'cliente-create', component: ClientesCreateComponent},
   { path: 'cliente-read', component: ClientesReadComponent },
   { path: 'cliente-update/:id', component: ClientesUpdateComponent },
+  
   // --proveedor paths--
   { path: 'dashboard-proveedor', component: DashboardProveedorComponent },
   { path: 'catalogo-read', component: CatalogoReadComponent },

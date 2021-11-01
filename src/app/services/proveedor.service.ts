@@ -33,4 +33,30 @@ export class ProveedorService {
     return this.http.post<any>(`${this.url}/searchProductoId`, {id});
   }
 
+  createProveedor( proveedor: any, imagen: File ) {
+    const { nombreUsuario,
+    nombreEmpresa,
+    telefono,
+    email,
+    rfc,
+    domicilio,
+    publicidad, 
+    password} = proveedor
+
+    const fd = new FormData();
+    fd.append('nombreUsuario', nombreUsuario);
+    fd.append('nombreEmpresa', nombreEmpresa);
+    fd.append('telefono', telefono);
+    fd.append('email', email);
+    fd.append('password', password);
+    fd.append('rfc', rfc);
+    fd.append('domicilio', domicilio);
+    fd.append('publicidad', publicidad);
+    fd.append('imagen', imagen);
+
+    console.log(fd);
+
+    return this.http.post(this.url, fd);
+  }
+
 }

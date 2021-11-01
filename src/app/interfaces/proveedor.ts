@@ -18,3 +18,14 @@ export interface Proveedor {
      estrellasTotal: number,
      estrellasArray: Array<number> 
 }
+
+export let ProveedorCreate = {
+     nombreUsuario: '',
+     nombreEmpresa: '',
+     telefono: '',
+     email: '',
+     password: '',
+     rfc: '',
+     domicilio: '',
+     publicidad: true,
+}

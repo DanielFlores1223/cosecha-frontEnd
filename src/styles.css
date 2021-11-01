@@ -8,6 +8,7 @@
     --amarilloEstrella: #F3E42A;
     --naranjaPrimario: #F39C12;
     --naranjaOscuro: #D68910;
+    --colorLabel: #839192;
     --fuenteTitulos: 'Signika Negative', sans-serif;
 }
 
@@ -27,6 +28,32 @@ a,
 p {
     font-size: 1.1rem;
     line-height: 1.5;
+}
+
+
+/* Estilos generales para los formularios */
+
+label {
+    font-size: 1rem;
+    color: var(--colorLabel);
+}
+
+.input-style-text:hover {
+    border: 2px solid var(--verdeOpaco);
+}
+
+.input-style-text:focus {
+    outline: rgb(4, 4, 4);
+    box-shadow: 1px 7px 10px -5px rgba(90, 116, 148, 0.3);
+}
+
+.color-check:checked {
+    background-color: var(--verdeOpaco);
+    border: 0;
+}
+
+.grupo-form {
+    margin-bottom: 0.5rem;
 }
 
 p .btn-responsive {
@@ -67,6 +94,7 @@ p .btn-responsive {
 .btn-verde {
     background-color: var(--verdeOpaco);
     color: var(--blanco);
+    font-size: 1rem;
 }
 
 .btn-verde:hover {
@@ -78,6 +106,15 @@ p .btn-responsive {
     .menu-responsive-lg {
         display: none;
     }
+}
+
+.color-header {
+    background-color: var(--grisClaro);
+}
+
+.color-header button {
+    color: var(--blanco);
+    background-color: var(--blanco);
 }
 
 @media (min-width: 992px) {
